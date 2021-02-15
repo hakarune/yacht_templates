@@ -280,7 +280,7 @@
     ],
     "volumes": [
       {
-        "container": "/books",
+        "container": "/audiobooks",
         "bind": "!audiobooks"
       },
       {
@@ -325,7 +325,7 @@
     "restart_policy": "unless-stopped",
     "ports": [
       {
-        "WebUI":82:80/tcp"
+        "WebUI":"82:80/tcp"
       }
     ],
     "volumes": [
@@ -927,7 +927,7 @@
         "container": "/tmp"
       },
       {
-        "container": "/backups"
+        "container": "/backups",
 		"bind": "!backups/Duplicati"
       },
       {
@@ -1558,7 +1558,7 @@
         "container": "/downloads"
       },
       {
-        "container": "/books"
+        "container": "/books",
 		"bind": "!books"
       }
     ],
@@ -3691,15 +3691,15 @@
     ],
     "volumes": [
       {
-        "container": "/books"
+        "container": "/books",
 		"bind": "!books"
       },
       {
-        "container": "/comics"
+        "container": "/comics",
 		"bind": "!comics"
       },
       {
-        "container": "/config"
+        "container": "/config",
 		"bind": "!config/ubooquity"
       }
     ],
