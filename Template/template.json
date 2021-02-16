@@ -970,15 +970,39 @@
     "volumes": [
       {
         "container": "/config",
-        "bind": "!config/Emby"
+        "bind": "!config/emby"
       },
       {
-        "container": "/data/tvshows",
+        "container": "/tv",
         "bind": "!tv"
       },
       {
-        "container": "/data/movies",
+        "container": "/movies",
         "bind": "!movies"
+      },
+	  {
+        "container": "/ebooks",
+        "bind": "!books"
+      },
+	  {
+        "container": "/music",
+        "bind": "!music"
+      },
+	  {
+        "container": "/tmp",
+        "bind": "/home/hakarune/emby"
+      },
+	  {
+        "container": "/extras",
+        "bind": "/home/hakarune/emby/Cinema experience stuff"
+      },
+	  {
+        "container": "/other",
+        "bind": "/sharedfolders/External/Videos"
+      },
+	  {
+        "container": "/audiobooks",
+        "bind": "!audiobooks"
       }
     ],
     "env": [
@@ -994,7 +1018,8 @@
       },
       {
         "name": "TZ",
-        "label": "TZ"
+        "label": "TZ",
+		"bind": "!TZ"
       }
     ]
   },
