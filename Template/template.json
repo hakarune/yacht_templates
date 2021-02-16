@@ -432,9 +432,11 @@
         "label": "PGID",
         "default": "!PGID"
       },
-        "name": "UMASK_SET"
-        "label": "UMASK_SET"
+	  {
+        "name": "UMASK_SET",
+        "label": "UMASK_SET",
         "defaul": "022"
+	  }
     ]
   },
   {
