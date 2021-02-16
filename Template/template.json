@@ -394,6 +394,51 @@
   },
   {
     "type": 1,
+    "title": "Calibre",
+    "name": "calibre",
+    "description": "Calibre Web is a web app providing a clean interface for browsing, reading and downloading eBooks using an existing Calibre database.\n\n  [br][br]\n  [b][u][span style='color: #E80000;']Configuration[/span][/u][/b][br]\n  [b]/config[/b] Where Calibre-web should store it's database[br]\n  [b]/books[/b] Path to your calibre library metadata.db file[br]",
+    "logo": "https://github.com/kovidgoyal/calibre/raw/master/resources/images/lt.png",
+    "image": "linuxserver/calibre:latest",
+    "categories": [
+      "Cloud",
+      "Books"
+    ],
+    "platform": "linux",
+    "restart_policy": "unless-stopped",
+    "ports": [
+      {
+        "DesktopGUI": "8383:8080/tcp",
+		"WebUI": "8384:8081/tcp"
+      }
+    ],
+    "volumes": [
+      {
+        "container": "/books",
+        "bind": "!books"
+      },
+      {
+        "container": "/config",
+        "bind": "!config/Calibre"
+      }
+    ],
+    "env": [
+      {
+        "name": "PUID",
+        "label": "PUID",
+        "default": "!PUID"
+      },
+      {
+        "name": "PGID",
+        "label": "PGID",
+        "default": "!PGID"
+      },
+        "name": "UMASK_SET"
+        "label": "UMASK_SET"
+        "defaul": "022"
+    ]
+  },
+  {
+    "type": 1,
     "title": "Cardigann",
     "name": "cardigann",
     "description": "Cardigann, a server for adding extra indexers to Sonarr, SickRage and CouchPotato via Torznab and TorrentPotato proxies. Behind the scenes Cardigann logs in and runs searches and then transforms the results into a compatible format.",
