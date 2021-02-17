@@ -58,6 +58,50 @@
   },
   {
     "type": 1,
+    "title": "ComiXed",
+    "name": "ComiXed",
+    "description": "An application for managing digital comics.",
+    "logo": "https://pbs.twimg.com/profile_images/621752539525025792/uDa-WEDl_400x400.jpg",
+    "image": "comixed/comixed:latest",
+    "categories": [
+      "Comics"
+    ],
+    "platform": "linux",
+    "restart_policy": "unless-stopped",
+    "ports": [
+      {
+        "WebUI": "8382:8080/tcp"
+      }
+    ],
+    "volumes": [
+      {
+        "container": "/config",
+		"bind": "!config/comixed"
+      },
+      {
+        "container": "/comics",
+		"bind": "!comics"
+      },
+      {
+        "container": "/downloads",
+		"bind": "!downloads"
+      }
+    ],
+    "env": [
+      {
+        "name": "PUID",
+        "label": "PUID",
+        "default": "!PUID"
+      },
+      {
+        "name": "PGID",
+        "label": "PGID",
+        "default": "!PGID"
+      }
+    ]
+  },
+  {
+    "type": 1,
     "title": "EmbyStat",
     "name": "EmbyStat",
     "description": "Embystat is a personal web server that can calculate all kinds of statistics from your (local) Emby server. Just install this on your server and let him calculate all kinds of fun stuff.",
@@ -1564,6 +1608,46 @@
       {
         "name": "TZ",
         "label": "TZ"
+      }
+    ]
+  },
+  {
+    "type": 1,
+    "title": "Komga",
+    "name": "Komga",
+    "description": "Komga is a free and open source comics/mangas/magazines server.",
+    "logo": "https://komga.org/assets/media/logo.svg",
+    "image": "gotson/komga:latest",
+    "categories": [
+      "Comics"
+    ],
+    "platform": "linux",
+    "restart_policy": "unless-stopped",
+    "ports": [
+      {
+        "WebUI": "8282:8080/tcp"
+      }
+    ],
+    "volumes": [
+      {
+        "container": "/config",
+		"bind": "!config/komga"
+      },
+      {
+        "container": "/comics",
+		"bind": "!comics"
+      }
+    ],
+    "env": [
+      {
+        "name": "PUID",
+        "label": "PUID",
+        "default": "!PUID"
+      },
+      {
+        "name": "PGID",
+        "label": "PGID",
+        "default": "!PGID"
       }
     ]
   },
