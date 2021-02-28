@@ -507,8 +507,8 @@
         "bind": "!config/papercutmf"
       },
       {
-        "container": "/papercut/server/server.properties",
-        "bind": "!config/papercutmf/server.properties"
+        "container": "/papercut/server",
+        "bind": "!config/papercutmf"
       },
       {
         "container": "/papercut/server/server/data/internal",
