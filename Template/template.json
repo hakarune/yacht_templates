@@ -487,7 +487,7 @@
     "type": 1,
     "title": "Papercut Mf",
     "name": "Papercut MF",
-    "description": ".",
+    "description": "Powerful print management for printers and MFDs",
     "logo": "https://cdn.papercut.com/web/img/products/mobility-print/logo.svg",
     "image": "tomcat2111/papercut-mf:latest",
     "categories": [
@@ -521,6 +521,42 @@
       {
         "container": "/papercut/server/data/backups",
         "bind": "!backups/papercutmf"
+      }
+    ],
+    "env": [
+      {
+        "name": "PUID",
+        "label": "PUID",
+        "default": "!PUID"
+      },
+      {
+        "name": "PGID",
+        "label": "PGID",
+        "default": "!PGID"
+      }
+    ]
+  },
+  {
+    "type": 1,
+    "title": "CUPs",
+    "name": "CUPs",
+    "description": "Docker image including CUPS print server and printing drivers (installed from the Debian packages)..",
+    "logo": "https://appcenter.software-univention.de/meta-inf/4.4/cups/logo_app_center_print_server.svg",
+    "image": "olbat/cupsd:latest",
+    "categories": [
+      "Downloaders"
+    ],
+    "platform": "linux",
+    "restart_policy": "unless-stopped",
+    "ports": [
+      {
+        "WebUI": "631:631/tcp"
+      }
+    ],
+    "volumes": [
+      {
+        "container": "/config",
+        "bind": "!config/CUPs"
       }
     ],
     "env": [
