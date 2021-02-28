@@ -485,6 +485,59 @@
   },
   {
     "type": 1,
+    "title": "Papercut Mf",
+    "name": "Papercut MF",
+    "description": ".",
+    "logo": "https://cdn.papercut.com/web/img/products/mobility-print/logo.svg",
+    "image": "tomcat2111/papercut-mf:latest",
+    "categories": [
+      "Printing"
+    ],
+    "platform": "linux",
+    "restart_policy": "unless-stopped",
+    "ports": [
+      {
+        "WebUI": "9191:9191/tcp",
+        "WebUI-2": "9193:9193/tcp" 
+      }
+    ],
+    "volumes": [
+      {
+        "container": "/config",
+        "bind": "!config/papercutmf"
+      },
+      {
+        "container": "/papercut/server/server.properties",
+        "bind": "!config/papercutmf/server.properties"
+      },
+      {
+        "container": "/papercut/server/server/data/internal",
+        "bind": "!config/papercutmf/internal"
+      },
+      {
+        "container": "/papercut/server/logs",
+        "bind": "!logs/papercutmf"
+      },
+      {
+        "container": "/papercut/server/data/backups",
+        "bind": "!backups/papercutmf"
+      }
+    ],
+    "env": [
+      {
+        "name": "PUID",
+        "label": "PUID",
+        "default": "!PUID"
+      },
+      {
+        "name": "PGID",
+        "label": "PGID",
+        "default": "!PGID"
+      }
+    ]
+  },
+  {
+    "type": 1,
     "title": "Cardigann",
     "name": "cardigann",
     "description": "Cardigann, a server for adding extra indexers to Sonarr, SickRage and CouchPotato via Torznab and TorrentPotato proxies. Behind the scenes Cardigann logs in and runs searches and then transforms the results into a compatible format.",
@@ -518,7 +571,7 @@
         "default": "!PGID"
       }
     ]
-  },
+  }, 
   {
     "type": 1,
     "title": "Chevereto",
