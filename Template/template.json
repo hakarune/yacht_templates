@@ -498,7 +498,7 @@
     "ports": [
       {
         "WebUI": "9191:9191/tcp",
-        "WebUI-2": "9193:9193/tcp" 
+        "WebUI2": "9193:9193/tcp" 
       }
     ],
     "volumes": [
