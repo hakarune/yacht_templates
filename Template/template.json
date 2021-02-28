@@ -507,10 +507,6 @@
         "bind": "!config/papercutmf"
       },
       {
-        "container": "/papercut/server",
-        "bind": "!config/papercutmf/server"
-      },
-      {
         "container": "/papercut/server/server/data/internal",
         "bind": "!config/papercutmf/internal"
       },
