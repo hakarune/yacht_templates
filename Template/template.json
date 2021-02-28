@@ -485,8 +485,8 @@
   },
   {
     "type": 1,
-    "title": "Papercut Mf",
-    "name": "Papercut MF",
+    "title": "Papercut-Mf",
+    "name": "Papercut-MF",
     "description": "Powerful print management for printers and MFDs",
     "logo": "https://cdn.papercut.com/web/img/products/mobility-print/logo.svg",
     "image": "tomcat2111/papercut-mf:latest",
