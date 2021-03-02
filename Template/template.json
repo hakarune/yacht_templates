@@ -574,7 +574,7 @@
     "type": 1,
     "title": "NZBHydra",
     "name": "NZBHydra",
-    "description": "Nzbhydra2 is a meta search application for NZB indexers, the "spiritual successor" to NZBmegasearcH, and an evolution of the original application NZBHydra.",
+    "description": "Nzbhydra2 is a meta search application for NZB indexers, the 'spiritual successor' to NZBmegasearcH, and an evolution of the original application NZBHydra.",
     "logo": "https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/hydra-icon.png",
     "image": "linuxserver/nzbhydra2:latest",
     "categories": [
