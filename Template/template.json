@@ -555,6 +555,10 @@
       {
         "container": "/config",
         "bind": "!config/CUPs"
+      },
+	  {
+        "container": "/etc/cups/",
+        "bind": "!config/CUPs/etc"
       }
     ],
     "env": [
@@ -567,6 +571,11 @@
         "name": "PGID",
         "label": "PGID",
         "default": "!PGID"
+      },
+      {
+        "name": "TZ",
+        "label": "TZ",
+        "default": "!TZ"
       }
     ]
   },
