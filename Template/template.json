@@ -574,7 +574,7 @@
     "type": 1,
     "title": "NZBHydra",
     "name": "NZBHydra",
-    "description": "Nzbhydra2 is a meta search application for NZB indexers, the <spiritual successor> to NZBmegasearcH, and an evolution of the original application NZBHydra.",
+    "description": "Nzbhydra2 is a meta search application for NZB indexers the spiritual successor to NZBmegasearcH and an evolution of the original application NZBHydra.",
     "logo": "https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/hydra-icon.png",
     "image": "linuxserver/nzbhydra2:latest",
     "categories": [
@@ -584,13 +584,17 @@
     "restart_policy": "unless-stopped",
     "ports": [
       {
-        "WebUI": "631:631/tcp"
+        "WebUI": "5076:5076/tcp"
       }
     ],
     "volumes": [
       {
         "container": "/config",
-        "bind": "!config/CUPs"
+        "bind": "!config/NZBHydra2"
+      },
+	  {
+        "container": "/downloads",
+        "bind": "!downloads"
       }
     ],
     "env": [
@@ -603,6 +607,11 @@
         "name": "PGID",
         "label": "PGID",
         "default": "!PGID"
+      },
+      {
+        "name": "TZ",
+        "label": "TZ",
+        "default": "!TZ"
       }
     ]
   },
