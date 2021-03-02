@@ -539,7 +539,7 @@
     "name": "CUPs",
     "description": "Docker image including CUPS print server and printing drivers (installed from the Debian packages)..",
     "logo": "https://appcenter.software-univention.de/meta-inf/4.4/cups/logo_app_center_print_server.svg",
-    "image": "olbat/cupsd:latest",
+    "image": "jacobalberty/cups:latest",
     "categories": [
       "Printing",
 	  "Tools"
@@ -557,8 +557,12 @@
         "bind": "!config/CUPs"
       },
 	  {
-        "container": "/etc/cups/",
+        "container": "/config/etc",
         "bind": "!config/CUPs/etc"
+      },
+	  {
+        "container": "/config/log",
+        "bind": "!logs/CUPs"
       }
     ],
     "env": [
