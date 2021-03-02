@@ -61,7 +61,7 @@
     "title": "ComiXed",
     "name": "ComiXed",
     "description": "An application for managing digital comics.",
-    "logo": "https://pbs.twimg.com/profile_images/621752539525025792/uDa-WEDl_400x400.jpg",
+    "logo": "https://raw.githubusercontent.com/hakarune/yacht_templates/master/Images/comixed.jpg",
     "image": "comixed/comixed:latest",
     "categories": [
       "Comics"
@@ -442,7 +442,7 @@
     "title": "Calibre",
     "name": "calibre",
     "description": "Calibre Web is a web app providing a clean interface for browsing, reading and downloading eBooks using an existing Calibre database.\n\n  [br][br]\n  [b][u][span style='color: #E80000;']Configuration[/span][/u][/b][br]\n  [b]/config[/b] Where Calibre-web should store it's database[br]\n  [b]/books[/b] Path to your calibre library metadata.db file[br]",
-    "logo": "https://github.com/kovidgoyal/calibre/raw/master/resources/images/lt.png",
+    "logo": "https://raw.githubusercontent.com/hakarune/yacht_templates/master/Images/calibre.png",
     "image": "linuxserver/calibre:latest",
     "categories": [
       "Cloud",
@@ -489,7 +489,7 @@
     "title": "Papercut-Mf",
     "name": "Papercut-MF",
     "description": "Powerful print management for printers and MFDs",
-    "logo": "https://cdn.papercut.com/web/img/products/mobility-print/logo.svg",
+    "logo": "https://raw.githubusercontent.com/hakarune/yacht_templates/master/Images/PapercutMF.png",
     "image": "tomcat2111/papercut-mf:latest",
     "categories": [
       "Printing"
@@ -538,7 +538,7 @@
     "title": "CUPs",
     "name": "CUPs",
     "description": "Docker image including CUPS print server and printing drivers (installed from the Debian packages)..",
-    "logo": "https://appcenter.software-univention.de/meta-inf/4.4/cups/logo_app_center_print_server.svg",
+    "logo": "https://raw.githubusercontent.com/hakarune/yacht_templates/master/Images/CUPs.png",
     "image": "jacobalberty/cups:latest",
     "categories": [
       "Printing",
@@ -1352,7 +1352,7 @@
     "title": "Grafana",
     "name": "grafana",
     "description": "Grafana is a multi-platform open source analytics and interactive visualization web application. It provides charts, graphs, and alerts for the web when connected to supported data sources.",
-    "logo": "https://logodix.com/logo/1736776.png",
+    "logo": "https://raw.githubusercontent.com/hakarune/yacht_templates/master/Images/Grafana.png",
     "image": "grafana/grafana",
     "categories": [
       "Other",
@@ -1716,7 +1716,7 @@
     "title": "Komga",
     "name": "Komga",
     "description": "Komga is a free and open source comics/mangas/magazines server.",
-    "logo": "https://komga.org/assets/media/logo.svg",
+    "logo": "https://raw.githubusercontent.com/hakarune/yacht_templates/master/Images/Komanga.png",
     "image": "gotson/komga:latest",
     "categories": [
       "Comics"
