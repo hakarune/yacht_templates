@@ -313,6 +313,7 @@
     "image": "linuxserver/booksonic:latest",
     "categories": [
       "Books",
+	  "Audiobooks",
       "Other"
     ],
     "platform": "linux",
@@ -539,6 +540,43 @@
     "description": "Docker image including CUPS print server and printing drivers (installed from the Debian packages)..",
     "logo": "https://appcenter.software-univention.de/meta-inf/4.4/cups/logo_app_center_print_server.svg",
     "image": "olbat/cupsd:latest",
+    "categories": [
+      "Printing",
+	  "Tools"
+    ],
+    "platform": "linux",
+    "restart_policy": "unless-stopped",
+    "ports": [
+      {
+        "WebUI": "631:631/tcp"
+      }
+    ],
+    "volumes": [
+      {
+        "container": "/config",
+        "bind": "!config/CUPs"
+      }
+    ],
+    "env": [
+      {
+        "name": "PUID",
+        "label": "PUID",
+        "default": "!PUID"
+      },
+      {
+        "name": "PGID",
+        "label": "PGID",
+        "default": "!PGID"
+      }
+    ]
+  },
+  {
+    "type": 1,
+    "title": "NZBHydra",
+    "name": "NZBHydra",
+    "description": "Nzbhydra2 is a meta search application for NZB indexers, the "spiritual successor" to NZBmegasearcH, and an evolution of the original application NZBHydra.",
+    "logo": "https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/hydra-icon.png",
+    "image": "linuxserver/nzbhydra2:latest",
     "categories": [
       "Downloaders"
     ],
